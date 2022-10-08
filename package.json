@@ -6,7 +6,8 @@
         "start": "vite --host 0.0.0.0",
         "build": "vue-tsc --noEmit --skipLibCheck  && vite build",
         "serve": "vite preview",
-        "cm": "cz"
+        "cm": "cz",
+        "lint": "eslint --fix --ext .js,.vue src"
     },
     "husky": {
         "hooks": {
@@ -16,7 +17,7 @@
         }
     },
     "lint-staged": {
-        "*.{vue,js,ts,jsx,tsx}": [
+        "src/**/*.{vue,js,ts,jsx,tsx}": [
             "prettier --write",
             "eslint --fix",
             "git add"
