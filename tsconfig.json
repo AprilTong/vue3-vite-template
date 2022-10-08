@@ -1,5 +1,6 @@
 {
     "compilerOptions": {
+        "types": ["vite/client"],
         "target": "esnext",
         "module": "esnext",
         "moduleResolution": "node",
@@ -8,11 +9,16 @@
         "sourceMap": true,
         "resolveJsonModule": true,
         "esModuleInterop": true,
-        "lib": ["esnext", "dom"],
+        "isolatedModules": true,
+        "skipLibCheck": true,
+        "lib": ["esnext", "dom", "dom.Iterable", "es6"],
         "baseUrl": ".",
         "paths": {
             "@/*": ["src/*"]
-        }
+        },
+        "suppressImplicitAnyIndexErrors": true,
+        "noImplicitAny": false
     },
-    "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]
+    "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
+    "exclude": ["node_modules", "**/*.spec.ts"]
 }

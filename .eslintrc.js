@@ -22,6 +22,8 @@ module.exports = {
         'import/no-unresolved': 'off',
         // 关闭内置模块检查
         'import/no-extraneous-dependencies': 'off',
+        // 支持根节点为非单个节点
+        'vue/no-multiple-template-root': 'off',
         // 导入文件设置后缀
         'import/extensions': [
             'error',
@@ -54,5 +56,12 @@ module.exports = {
         // 允许更改函数入参的属性
         'no-param-reassign': ['error', { props: false }],
         'vue/script-setup-uses-vars': 'off',
+        '@typescript-eslint/explicit-module-boundary-types': ['error'],
+        'vue/comment-directive': [
+            'error',
+            {
+                reportUnusedDisableDirectives: false,
+            },
+        ],
     },
 }

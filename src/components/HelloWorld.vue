@@ -1,6 +1,5 @@
 <template>
     <h1>{{ msg }}</h1>
-
     <p>
         Recommended IDE setup:
         <a href="https://code.visualstudio.com/" target="_blank">VSCode</a>
@@ -9,10 +8,14 @@
         or
         <a href="https://github.com/johnsoncodehk/volar" target="_blank">Volar</a>
         (if using
-        <code>&lt;script setup&gt;</code>)
+        <code>&lt;script setup&gt;</code>
+        )
     </p>
-
-    <p>See <code>README.md</code> for more information.</p>
+    <p>
+        See
+        <code>README.md</code>
+        for more information.
+    </p>
 
     <p>
         <a href="https://vitejs.dev/guide/features.html" target="_blank"> Vite Docs </a>
@@ -21,25 +24,28 @@
     </p>
 
     <button @click="count++">count is: {{ count }}</button>
+
     <p>
         Edit
-        <code>components/HelloWorld.vue</code> to test hot module replacement.
+        <code>components/HelloWorld.vue</code>
+        to test hot module replacement.
     </p>
 </template>
 
 <script lang="ts">
 import { ref, defineComponent } from 'vue'
+
 export default defineComponent({
-    name: 'HelloWorld',
-    props: {
-        msg: {
-            type: String,
-            required: true,
-        },
-    },
-    setup: () => {
-        const count = ref(0)
-        return { count }
+    setup() {
+        let count = ref(0)
+
+
+
+        const msg = ref('hello')
+        return {
+            count,
+            msg,
+        }
     },
 })
 </script>
