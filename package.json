@@ -6,7 +6,8 @@
         "start": "vite --host 0.0.0.0",
         "build": "vue-tsc --noEmit --skipLibCheck  && vite build",
         "serve": "vite preview",
-        "cm": "cz"
+        "cm": "cz",
+        "eslint": "eslint --fix --ext .js,.vue,.ts,.jsx,.tsx src"
     },
     "husky": {
         "hooks": {
