@@ -37,9 +37,7 @@ import { ref, defineComponent } from 'vue'
 
 export default defineComponent({
     setup() {
-        let count = ref(0)
-
-
+        const count = ref(0)
 
         const msg = ref('hello')
         return {

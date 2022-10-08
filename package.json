@@ -9,15 +9,11 @@
         "cm": "cz",
         "eslint": "eslint --fix --ext .js,.vue,.ts,.jsx,.tsx src"
     },
-    "husky": {
-        "hooks": {
-            "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS",
-            "pre-commit": "lint-staged"
-        }
-    },
     "lint-staged": {
         "./**/*.{vue,js,ts,jsx,tsx}": [
-            "eslint --fix --ext"
+            "prettier --write",
+            "eslint --fix",
+            "git add"
         ]
     },
     "dependencies": {
