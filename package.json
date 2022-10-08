@@ -8,8 +8,19 @@
         "serve": "vite preview",
         "cm": "cz"
     },
+    "husky": {
+        "hooks": {
+            "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS",
+            "pre-commit": "lint-staged",
+            "pre-add": "lint-staged"
+        }
+    },
     "lint-staged": {
-        "*.{vue,js,ts,jsx,tsx}": "prettier --write --ignore-unknown"
+        "*.{vue,js,ts,jsx,tsx}": [
+            "prettier --write",
+            "eslint --fix",
+            "git add"
+        ]
     },
     "dependencies": {
         "axios": "^0.21.1",
