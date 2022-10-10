@@ -2,7 +2,7 @@
 
 一个基于 vue3+vite+typescript+element-plus+vuex+vue-router 的项目模版。
 
-# 项目规范
+## 项目规范
 
 1. 代码格式规范 Eslint+Prettier
 2. 代码提交规范 commitizen
