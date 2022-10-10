@@ -1,18 +1,38 @@
-# Vue 3 + Typescript + Vite
+## Vue 3 + Typescript + Vite
 
-vue3 项目
+一个基于 vue3+vite+typescript+element-plus+vuex+vue-router 的项目模版。
+
+# 项目规范
+
+1. 代码格式规范 Eslint+Prettier
+2. 代码提交规范 commitizen
+3. 提交代码自动修复格式错误 lint-staged
+
+## 可通过脚手架快速创建自己的项目
+
+1.全局安装脚手架
+
+```
+npm install april-vue3-cli
+```
+
+2. 创建项目（testProject 为项目名）
+
+```
+yuan create testProject
+```
 
 ## 开发
 
 ```
-yarn install
-yarn run dev
+npm install
+npm run dev
 ```
 
 ## 发布
 
 ```
-yarn run build
+npm run build
 ```
 
 ## 参考文章
